@@ -1,13 +1,54 @@
 @import "tailwindcss";
+@import "./font/font.css";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Chopin-Trial", sans-serif;
+
+  --color-neutral-0: rgba(var(--neutral--0));
+  --color-neutral-100: rgba(var(--neutral--100));
+  --color-neutral-200: rgba(var(--neutral--200));
+  --color-neutral-300: rgba(var(--neutral--300));
+  --color-neutral-400: rgba(var(--neutral--400));
+  --color-neutral-500: rgba(var(--neutral--500));
+  --color-neutral-600: rgba(var(--neutral--600));
+  --color-neutral-700: rgba(var(--neutral--700));
+  --color-neutral-800: rgba(var(--neutral--800));
+  --color-neutral-900: rgba(var(--neutral--900));
+  --color-neutral-1000: rgba(var(--neutral--1000));
+}
+
+:root {
+  /* Color styles */
+  --neutral--0: 255, 255, 255;
+  --neutral--100: 232, 232, 232;
+  --neutral--200: 209, 209, 209;
+  --neutral--300: 186, 186, 186;
+  --neutral--400: 163, 163, 163;
+  --neutral--500: 140, 140, 140;
+  --neutral--600: 117, 117, 117;
+  --neutral--700: 94, 94, 94;
+  --neutral--800: 71, 71, 71;
+  --neutral--900: 48, 48, 48;
+  --neutral--1000: 25, 25, 25;
+}
+
+.dark {
+  --neutral--0: 25, 25, 25;
+  --neutral--100: 48, 48, 48;
+  --neutral--200: 71, 71, 71;
+  --neutral--300: 94, 94, 94;
+  --neutral--400: 117, 117, 117;
+  --neutral--500: 140, 140, 140;
+  --neutral--600: 163, 163, 163;
+  --neutral--700: 186, 186, 186;
+  --neutral--800: 209, 209, 209;
+  --neutral--900: 232, 232, 232;
+  --neutral--1000: 255, 255, 255;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-neutral-0 dark:bg-neutral-0;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
